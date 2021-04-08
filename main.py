@@ -33,5 +33,11 @@ def right_bar():
         return render_template("right-sidebar.html")
 
 
+@app.route('/gaming', methods=['GET', 'POST'])
+def more_gaming():
+    if request.method == 'GET':
+        return render_template("gaming.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
